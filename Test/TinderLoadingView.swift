@@ -99,7 +99,6 @@ extension TinderLoadingView  {
         if self.isRound {
             self.makeRound(waveView)
         }
-        
         waveView.backgroundColor    = self.color
         waveView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(waveView)
@@ -119,13 +118,16 @@ extension TinderLoadingView  {
             "width" : width,
             "height": width
         ]
+        //Sets Width
         let horizontalCons = NSLayoutConstraint.constraintsWithVisualFormat("H:[View(width)]", options:[], metrics: viewMetrics, views: viewDic);
+        //Sets Height
         let verticalCons = NSLayoutConstraint.constraintsWithVisualFormat("V:[View(height)]", options:[], metrics: viewMetrics, views: viewDic);
         view.superview?.addConstraints(horizontalCons)
         view.superview?.addConstraints(verticalCons)
         
-        
+        //Sets Y-Position
         let centerVertically   = NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: view.superview, attribute: .CenterY, multiplier: 1, constant: 0)
+        //Sets X-Position
         let centerHorizontally = NSLayoutConstraint(item: view, attribute: .CenterX, relatedBy: .Equal, toItem:view.superview , attribute: .CenterX, multiplier: 1, constant: 0)
         view.superview?.addConstraints([centerVertically,centerHorizontally])
     }
