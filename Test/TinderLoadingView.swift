@@ -17,12 +17,12 @@ class RoundView:UIView {
 //MARK: - Configuration
 //-------------------------------------------------------------------------------------------
 
-let transformationScale:CGFloat = 100
-let expandingViewColor = UIColor(red: 63/255, green: 152/255, blue: 250/255, alpha: 0.7)
-let waveFrequency = 10
-let animationDuration:Double = 4
-let expandingViewWidth:Double = 3
-let expandingViewHeight:Double = 3
+let transformationScale:CGFloat = 30
+let expandingViewColor = UIColor(red: 63/255, green: 152/255, blue: 250/255, alpha: 0.4)
+let waveFrequency = 3
+let animationDuration:Double = 6
+let expandingViewWidth:Double = 10
+let expandingViewHeight:Double = 10
 
 class TinderLoadingView: UIView {
     let transformation = CGAffineTransformMakeScale(transformationScale, transformationScale)
@@ -51,12 +51,7 @@ class TinderLoadingView: UIView {
         for _ in 0...waveFrequency {
             views.append( self.addExpandingView())
         }
-        let centerView = self.addExpandingView(10)
-        centerView.backgroundColor =  UIColor(red: 100/255, green: 10/255, blue: 0/255, alpha: 0.7);        self.centerAnimation(centerView, delay: 0)
-        
-        
     }
-    
     
     func start() {
         let delayScale:Double = Double(animationDuration)   / Double(views.count)
@@ -76,7 +71,7 @@ class TinderLoadingView: UIView {
 //-------------------------------------------------------------------------------------------
 extension TinderLoadingView {
     func animate(view:UIView , delay:NSTimeInterval) {
-        UIView.animateWithDuration(Double(animationDuration), delay: delay, options: [.Repeat, .CurveLinear], animations: {
+        UIView.animateWithDuration(Double(animationDuration), delay: delay, options: [.CurveLinear,.Repeat], animations: {
             () -> Void in
             view.transform = self.transformation
             view.alpha = 0
@@ -84,9 +79,9 @@ extension TinderLoadingView {
     }
     
     func centerAnimation(view:UIView , delay:NSTimeInterval) {
-        UIView.animateWithDuration(Double(0.5), delay: delay, options: [.Repeat, .CurveLinear, .Autoreverse], animations: {
+        UIView.animateWithDuration( 0.3, delay: delay, options: [.Repeat, .CurveLinear, .Autoreverse], animations: {
             () -> Void in
-            view.transform = CGAffineTransformMakeScale(0.5, 0.5)
+            view.transform = CGAffineTransformMakeScale(0.2, 0.2)
             view.alpha = 0
             }, completion:nil)
     }
