@@ -18,7 +18,7 @@ class RoundView:UIView {
 //-------------------------------------------------------------------------------------------
 
 let transformationScale:CGFloat = 30
-let expandingViewColor = UIColor(red: 63/255, green: 152/255, blue: 250/255, alpha: 0.4)
+let expandingViewColor = UIColor(red: 97/255, green: 47/255, blue: 105/255, alpha: 0.4)
 let waveFrequency = 3
 let animationDuration:Double = 6
 let expandingViewWidth:Double = 10
