@@ -8,8 +8,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TinderLoadingView" customModule="Test" customModuleProvider="target">
             <connections>
-                <outlet property="firstExpandingView" destination="NXH-nN-Kdo" id="uRQ-0W-LCl"/>
-                <outlet property="secondExpandingView" destination="slu-P0-Ea7" id="fRh-1Z-puw"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ZVV-QB-Jes"/>
             </connections>
         </placeholder>
@@ -18,22 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NXH-nN-Kdo" userLabel="FirstExpandingView" customClass="RoundView" customModule="Test" customModuleProvider="target">
-                    <rect key="frame" x="295" y="295" width="10" height="10"/>
-                    <color key="backgroundColor" red="0.2487079405" green="0.59641977850000005" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="10" id="J2i-SI-VPL"/>
-                        <constraint firstAttribute="width" secondItem="NXH-nN-Kdo" secondAttribute="height" multiplier="1:1" id="Xho-mF-CAg"/>
-                    </constraints>
-                </view>
-                <view alpha="0.69999998807907104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slu-P0-Ea7" userLabel="SecondExpandingView" customClass="RoundView" customModule="Test" customModuleProvider="target">
-                    <rect key="frame" x="295" y="295" width="10" height="10"/>
-                    <color key="backgroundColor" red="0.2487079405" green="0.59641977850000005" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="10" id="Aiw-zh-UAT"/>
-                        <constraint firstAttribute="width" secondItem="slu-P0-Ea7" secondAttribute="height" multiplier="1:1" id="qlt-Rb-X6O"/>
-                    </constraints>
-                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2W-R6-CaU" userLabel="CenterView - NonExpanding" customClass="RoundView" customModule="Test" customModuleProvider="target">
                     <rect key="frame" x="295" y="295" width="10" height="10"/>
                     <color key="backgroundColor" red="0.78745039039999998" green="0.42374397899999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,20 +25,11 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="NXH-nN-Kdo" firstAttribute="centerX" secondItem="slu-P0-Ea7" secondAttribute="centerX" id="3mG-lG-oXV"/>
-                <constraint firstItem="slu-P0-Ea7" firstAttribute="centerX" secondItem="w2W-R6-CaU" secondAttribute="centerX" id="4pI-d6-iq9"/>
-                <constraint firstItem="NXH-nN-Kdo" firstAttribute="width" secondItem="NXH-nN-Kdo" secondAttribute="height" multiplier="1:1" id="5kE-45-ELD"/>
-                <constraint firstItem="NXH-nN-Kdo" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="62p-kX-flH"/>
-                <constraint firstItem="slu-P0-Ea7" firstAttribute="width" secondItem="slu-P0-Ea7" secondAttribute="height" multiplier="1:1" id="Cb5-hz-eJE"/>
+                <constraint firstItem="w2W-R6-CaU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0It-Gn-Fgd"/>
                 <constraint firstItem="w2W-R6-CaU" firstAttribute="width" secondItem="w2W-R6-CaU" secondAttribute="height" multiplier="1:1" id="H2n-Ds-762"/>
-                <constraint firstItem="NXH-nN-Kdo" firstAttribute="width" secondItem="NXH-nN-Kdo" secondAttribute="height" multiplier="1:1" id="IXv-WH-GRQ"/>
-                <constraint firstItem="slu-P0-Ea7" firstAttribute="centerY" secondItem="w2W-R6-CaU" secondAttribute="centerY" id="ReR-W8-ULa"/>
-                <constraint firstItem="slu-P0-Ea7" firstAttribute="width" secondItem="slu-P0-Ea7" secondAttribute="height" multiplier="1:1" id="SwM-MP-MgE"/>
-                <constraint firstItem="NXH-nN-Kdo" firstAttribute="centerY" secondItem="slu-P0-Ea7" secondAttribute="centerY" id="dg6-YU-igP"/>
-                <constraint firstItem="NXH-nN-Kdo" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="f0E-Lh-hdw"/>
-                <constraint firstItem="NXH-nN-Kdo" firstAttribute="width" secondItem="NXH-nN-Kdo" secondAttribute="height" multiplier="1:1" id="tmt-tw-iR0"/>
+                <constraint firstItem="w2W-R6-CaU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zcw-j9-ru8"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
         </view>
