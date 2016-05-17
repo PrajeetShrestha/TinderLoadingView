@@ -10,8 +10,6 @@ import UIKit
 class RoundView:UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
- 
-        
     }
 }
 
@@ -21,7 +19,7 @@ class RoundView:UIView {
 
 let transformationScale:CGFloat = 100
 let expandingViewColor = UIColor(red: 63/255, green: 152/255, blue: 250/255, alpha: 0.7)
-let waveFrequency = 3
+let waveFrequency = 10
 let animationDuration:Double = 4
 let expandingViewWidth:Double = 3
 let expandingViewHeight:Double = 3
@@ -53,8 +51,8 @@ class TinderLoadingView: UIView {
         for _ in 0...waveFrequency {
             views.append( self.addExpandingView())
         }
-       let centerView = self.addExpandingView(20)
-        centerView.backgroundColor = UIColor.blackColor()
+        let centerView = self.addExpandingView(10)
+        centerView.backgroundColor =  UIColor(red: 100/255, green: 10/255, blue: 0/255, alpha: 0.7);        self.centerAnimation(centerView, delay: 0)
         
         
     }
@@ -67,7 +65,7 @@ class TinderLoadingView: UIView {
             self.animate(view, delay: NSTimeInterval(count * delayScale))
             print( NSTimeInterval(count * delayScale))
             count += 1
-
+            
         }
     }
     
@@ -81,6 +79,14 @@ extension TinderLoadingView {
         UIView.animateWithDuration(Double(animationDuration), delay: delay, options: [.Repeat, .CurveLinear], animations: {
             () -> Void in
             view.transform = self.transformation
+            view.alpha = 0
+            }, completion:nil)
+    }
+    
+    func centerAnimation(view:UIView , delay:NSTimeInterval) {
+        UIView.animateWithDuration(Double(0.5), delay: delay, options: [.Repeat, .CurveLinear, .Autoreverse], animations: {
+            () -> Void in
+            view.transform = CGAffineTransformMakeScale(0.5, 0.5)
             view.alpha = 0
             }, completion:nil)
     }
