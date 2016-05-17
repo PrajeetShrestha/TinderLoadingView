@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var l: TinderLoadingView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        l.waveFrequency = 3
         l.start()
     }
     
