@@ -15,7 +15,6 @@
 		D6B1A69B1CEACE8200C65C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6B1A6991CEACE8200C65C39 /* LaunchScreen.storyboard */; };
 		D6B1A6A61CEACE8200C65C39 /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1A6A51CEACE8200C65C39 /* TestTests.swift */; };
 		D6B1A6B11CEACE8200C65C39 /* TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1A6B01CEACE8200C65C39 /* TestUITests.swift */; };
-		D6B1A6C11CEAE16200C65C39 /* TinderLoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B1A6C01CEAE16200C65C39 /* TinderLoadingView.xib */; };
 		D6B1A6C31CEAE17700C65C39 /* TinderLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B1A6C21CEAE17700C65C39 /* TinderLoadingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +50,6 @@
 		D6B1A6AC1CEACE8200C65C39 /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B1A6B01CEACE8200C65C39 /* TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUITests.swift; sourceTree = "<group>"; };
 		D6B1A6B21CEACE8200C65C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6B1A6C01CEAE16200C65C39 /* TinderLoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TinderLoadingView.xib; sourceTree = "<group>"; };
 		D6B1A6C21CEAE17700C65C39 /* TinderLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderLoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +134,6 @@
 		D6B1A6C41CEAE4FC00C65C39 /* TinderLoadingVIew */ = {
 			isa = PBXGroup;
 			children = (
-				D6B1A6C01CEAE16200C65C39 /* TinderLoadingView.xib */,
 				D6B1A6C21CEAE17700C65C39 /* TinderLoadingView.swift */,
 			);
 			name = TinderLoadingVIew;
@@ -247,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6B1A69B1CEACE8200C65C39 /* LaunchScreen.storyboard in Resources */,
-				D6B1A6C11CEAE16200C65C39 /* TinderLoadingView.xib in Resources */,
 				D6B1A6981CEACE8200C65C39 /* Assets.xcassets in Resources */,
 				D6B1A6931CEACE8200C65C39 /* Main.storyboard in Resources */,
 			);
@@ -504,6 +500,7 @@
 				D6B1A6B71CEACE8200C65C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6B1A6B81CEACE8200C65C39 /* Build configuration list for PBXNativeTarget "TestTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +509,7 @@
 				D6B1A6BA1CEACE8200C65C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6B1A6BB1CEACE8200C65C39 /* Build configuration list for PBXNativeTarget "TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +518,7 @@
 				D6B1A6BD1CEACE8200C65C39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

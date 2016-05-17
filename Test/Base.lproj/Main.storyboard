@@ -17,9 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DUl-sD-gyJ" customClass="TinderLoadingView" customModule="Test" customModuleProvider="target">
-                                <rect key="frame" x="16" y="32" width="568" height="548"/>
-                                <color key="backgroundColor" red="0.2470588235" green="0.59607843140000005" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUl-sD-gyJ" customClass="TinderLoadingView" customModule="Test" customModuleProvider="target">
+                                <rect key="frame" x="16" y="36" width="568" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -10,8 +10,7 @@ import UIKit
 class RoundView:UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.cornerRadius = self.bounds.width/2
-        self.clipsToBounds = true
+ 
         
     }
 }
@@ -19,15 +18,15 @@ class RoundView:UIView {
 //-------------------------------------------------------------------------------------------
 //MARK: - Configuration
 //-------------------------------------------------------------------------------------------
-let transformationScale:CGFloat = 30
+
+let transformationScale:CGFloat = 100
 let expandingViewColor = UIColor(red: 63/255, green: 152/255, blue: 250/255, alpha: 0.7)
 let waveFrequency = 3
-let animationDuration:Double = 6
-let expandingViewWidth:Double = 10
-let expandingViewHeight:Double = 10
+let animationDuration:Double = 4
+let expandingViewWidth:Double = 3
+let expandingViewHeight:Double = 3
 
 class TinderLoadingView: UIView {
-    @IBOutlet var view: UIView!
     let transformation = CGAffineTransformMakeScale(transformationScale, transformationScale)
     var views:[UIView] = [UIView]()
     
@@ -45,19 +44,19 @@ class TinderLoadingView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.load()
-        self.addExpandingView()
+        print(self.subviews)
         
     }
     
     
     func load() {
-        NSBundle.mainBundle().loadNibNamed("TinderLoadingView", owner: self, options: nil)
-        self.view.frame = self.bounds
-        self.addSubview(self.view)
-        
         for _ in 0...waveFrequency {
             views.append( self.addExpandingView())
         }
+       let centerView = self.addExpandingView(20)
+        centerView.backgroundColor = UIColor.blackColor()   
+        
+        
     }
     
     
@@ -70,7 +69,6 @@ class TinderLoadingView: UIView {
             count += 1
 
         }
-        
     }
     
 }
@@ -93,23 +91,24 @@ extension TinderLoadingView {
 extension TinderLoadingView  {
     
     
-    func addExpandingView() -> UIView {
-        let roundView = RoundView(frame: CGRectMake(0,0,20,20))
+    func addExpandingView(width:Double = expandingViewHeight) -> UIView {
+        let roundView = UIView(frame: CGRectMake(0,0,20,20))
+        roundView.layer.cornerRadius = CGFloat(expandingViewWidth / Double(2.0))
+        roundView.clipsToBounds = true
         roundView.backgroundColor = expandingViewColor
-        roundView.alpha = 0.7
         self.addSubview(roundView)
         roundView.translatesAutoresizingMaskIntoConstraints = false
-        self.setWidthAndHeight(roundView)
+        self.setWidthAndHeight(roundView, width: width)
         self.centerHV(roundView)
         return roundView
     }
     
-    func setWidthAndHeight(view:UIView) {
+    func setWidthAndHeight(view:UIView, width:Double = expandingViewHeight) {
         let viewDic = ["View":view]
         let viewMetrics =
         [
-            "width" : expandingViewWidth,
-            "height": expandingViewHeight
+            "width" : width,
+            "height": width
         ]
         let horizontalCons = NSLayoutConstraint.constraintsWithVisualFormat("H:[View(width)]", options:[], metrics: viewMetrics, views: viewDic);
         let veritcleCons = NSLayoutConstraint.constraintsWithVisualFormat("V:[View(height)]", options:[], metrics: viewMetrics, views: viewDic);
@@ -120,6 +119,6 @@ extension TinderLoadingView  {
     func centerHV(view:UIView) {
         let centerVertically =  NSLayoutConstraint(item: view, attribute: .CenterY, relatedBy: .Equal, toItem: view.superview, attribute: .CenterY, multiplier: 1, constant: 0)
         let centerHorizontally =  NSLayoutConstraint(item: view, attribute: .CenterX, relatedBy: .Equal, toItem:view.superview , attribute: .CenterX, multiplier: 1, constant: 0)
-        self.view.superview?.addConstraints([centerVertically,centerHorizontally])
+        view.superview?.addConstraints([centerVertically,centerHorizontally])
     }
 }
