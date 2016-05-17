@@ -54,7 +54,7 @@ class TinderLoadingView: UIView {
             views.append( self.addExpandingView())
         }
        let centerView = self.addExpandingView(20)
-        centerView.backgroundColor = UIColor.blackColor()   
+        centerView.backgroundColor = UIColor.blackColor()
         
         
     }
@@ -93,7 +93,7 @@ extension TinderLoadingView  {
     
     func addExpandingView(width:Double = expandingViewHeight) -> UIView {
         let roundView = UIView(frame: CGRectMake(0,0,20,20))
-        roundView.layer.cornerRadius = CGFloat(expandingViewWidth / Double(2.0))
+        roundView.layer.cornerRadius = CGFloat(width / Double(2.0))
         roundView.clipsToBounds = true
         roundView.backgroundColor = expandingViewColor
         self.addSubview(roundView)
